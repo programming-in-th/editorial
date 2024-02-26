@@ -46,12 +46,6 @@ Time Complexity: $\mathcal{O}(NQ\log{N})$
 
 เราจะมีอาร์เรย์ $dp$ ซึ่ง $dp(i)$ เท่ากับจำนวนครั้งที่น้อยที่สุดที่เราจะสามารถสลับแล้วทำให้ค่า $M$ มีค่าไม่เกิน $i$ ซึ่งเราจะสามารถคำนวณ $dp(i)$ โดยให้ตอนแรก $dp(i)=0$ สมมติว่า $p$ นั้นประกอบด้วยวงวนขนาด $C_1,C_2,C_3,\dots,C_v$ เราจะทำขั้นตอนดังต่อไปนี้
 
-<!-- **for** $j\in\{1,2,\dots,v\}$ **do** <br>
-&ensp; &nbsp; **for** $i\in\{1,2,\dots,C_j\}$ **do** <br>
-&ensp; &ensp; &nbsp; &nbsp; $dp(i)\leftarrow dp(i)+\lceil\frac{C_j}{i}\rceil-1$ <br>
-&ensp; &nbsp; **end for** <br>
-**end for** -->
-
 ```cpp
 for j in (1, 2, ..., v) do
     for i in (1, 2, ..., C[j]) do
